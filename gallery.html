@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>Eco Harvest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+      	@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+body {
+font-family: 'Signika', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+position: relative; /* Ensure the body has a relative position */
+}
+p {
+            margin: 0 0 20px;
+            text-align: justify; /* Add this line for justifying paragraphs */
+        }
+nav {
+        background-color: rgb(2, 39, 10);
+        overflow: hidden;
+        font-family: 'Signika', sans-serif;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px; /* Add padding for spacing */
+    }
+
+    .logo {
+        max-height: 50px; /* Set the maximum height for your logo */
+        margin-right: 20px; /* Adjust the right margin for spacing between logo and links */
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: flex-end; /* Align the navigation links to the right */
+        gap: 10px; /* Adjust the gap for spacing between links */
+    }
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-family: 'Signika', sans-serif; /* Use Signika font for the links */
+}
+nav a:last-child {
+        margin-right: 0; /* Remove the right margin for the last link */
+    }
+
+    nav a:hover,
+nav a:focus,
+nav a:active {
+    text-decoration: none;
+    background-color: #30ce2a;
+    color: rgb(2, 39, 10);
+}  	
+.profile {
+margin-top:20px;
+margin-bottom:60px;
+}
+.profile .profile-img-list {
+    list-style-type: none;
+    margin: -0.0625rem -1.3125rem;
+    padding: 0;
+}
+.profile .profile-img-list:after,
+.profile .profile-img-list:before {
+    content: "";
+    display: table;
+    clear: both;
+}
+.profile .profile-img-list .profile-img-list-item {
+    float: left;
+    width: 25%;
+    padding: 0.0625rem;
+}
+.profile .profile-img-list .profile-img-list-item.main {
+    width: 50%;
+}
+.profile .profile-img-list .profile-img-list-item .profile-img-list-link {
+    display: block;
+    padding-top: 75%;
+    overflow: hidden;
+    position: relative;
+}
+.profile .profile-img-list .profile-img-list-item .profile-img-list-link .profile-img-content,
+.profile .profile-img-list .profile-img-list-item .profile-img-list-link img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.profile .profile-img-list .profile-img-list-item .profile-img-list-link .profile-img-content:before,
+.profile .profile-img-list .profile-img-list-item .profile-img-list-link img:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid rgba(60, 78, 113, 0.15);
+}
+.profile .profile-img-list .profile-img-list-item.with-number .profile-img-number {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-size: 1.625rem;
+    font-weight: 500;
+    line-height: 1.625rem;
+    margin-top: -0.8125rem;
+    text-align: center;
+}
+ 
+    </style>
+</head>
+<nav>
+    <img src="images/index/logo.png" alt="Your Logo" class="logo">
+    <a href="index.php">Home</a>
+    <a href="about.html">About</a>
+    <a href="Blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="events.html">Events</a>
+    <a href="services.html">Services</a>
+    <a href="farm.html">Farm</a>
+    <a href="weather.html">Weather</a>
+    <a href="map.html">Map</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="flogin.php">Farmer</a>
+    <a href="ologin.php">Officer</a>
+    <a href="alogin.php">Admin</a>
+</nav>
+<br></br>
+<body>
+    <header style="position: relative; background-color: #f4f4f4; color: rgb(2, 39, 10); text-align: center; padding: 10px; font-family: 'Signika', sans-serif;">
+        <h1 style="margin: 10;"> Eco Harvest Photographic Journey</h1>
+<div class="container profile mb-4">
+<div class="profile-img-list">
+<div class="profile-img-list-item main"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/1.jpg)"></span></a></div>
+<div class="profile-img-list-item main"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/2.jpg)"></span></a></div>
+<div class="profile-img-list-item"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/3.jpg)"></span></a></div>
+<div class="profile-img-list-item"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/4.jpeg)"></span></a></div>
+<div class="profile-img-list-item"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/5.jpg)"></span></a></div>
+<div class="profile-img-list-item"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/6.jpg)"></span></a></div>
+</div>
+</div>
+<br>
+<div class="container profile">
+<div class="profile-img-list">
+<div class="profile-img-list-item main"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/7.jpg)"></span></a></div>
+<div class="profile-img-list-item"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/8.jpg)"></span></a></div>
+<div class="profile-img-list-item"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/11.jpg)"></span></a></div>
+<div class="profile-img-list-item"><a href="#" class="profile-img-list-link"><span class="profile-img-content" style="background-image: url(images/Gallery/10.jpg)"></span></a></div>
+<div class="profile-img-list-item with-number">
+<a href="#" class="profile-img-list-link">
+<span class="profile-img-content" style="background-image: url(images/Gallery/12.jpg)"></span>
+<div class="profile-img-number">+12</div>
+</a>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+<br></br>
+<footer>
+    <p></p>
+</footer>
+</html>

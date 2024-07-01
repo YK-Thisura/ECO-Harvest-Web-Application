@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>Eco Harvest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+    	 	@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+             html {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Signika', sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: justify;
+        background-color: #f4f4f4;
+        font-weight: bold;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+.container {
+flex: 1; /* Allow the container to grow and fill the available space */
+}
+nav {
+background-color: rgb(2, 39, 10);
+overflow: hidden;
+font-family: 'Signika', sans-serif;
+display: flex;
+align-items: center;
+padding: 10px 80px; /* Add padding for spacing */
+}
+
+.logo {
+max-height: 50px; /* Set the maximum height for your logo */
+margin-right: 20px; /* Adjust the right margin for spacing between logo and links */
+}
+
+.nav-links {
+display: flex;
+justify-content: flex-end; /* Align the navigation links to the right */
+gap: 10px; /* Adjust the gap for spacing between links */
+}
+
+nav a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+font-weight: bold;
+margin-right: 10px;
+padding: 14px 16px;
+text-decoration: none;
+transition: background-color 0.3s;
+font-family: 'Signika', sans-serif; /* Use Signika font for the links */
+}
+nav a:last-child {
+margin-right: 0; /* Remove the right margin for the last link */
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+text-decoration: none;
+background-color: #30ce2a;
+color: rgb(2, 39, 10);
+}
+
+
+
+
+.decor-default {
+    background-color: #ffffff;
+}
+.contact .controls {
+    position: relative;
+}
+
+
+.contact .controls .icon {
+    position: absolute;
+    z-index: 2;
+    top: 18px;
+    width: 16px;
+    height: 16px;
+    display: block;
+    cursor: pointer;
+}
+.contact .controls .cover {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    min-height: 150px;
+}
+.cover {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+}
+.contact .controls .cont {
+    position: absolute;
+    z-index: 2;
+    top: 80px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.contact .controls .avatar {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
+    position: relative;
+    z-index: 2;
+}
+.contact .controls .name {
+    font-size: 20px;
+    line-height: 36px;
+    color: #ffffff;
+    margin: 0 0 10px;
+    position: relative;
+    z-index: 2;
+}
+.contact .controls .ui-mark {
+    display: inline-block;
+    border: 1px solid #ffffff;
+    font-size: 16px;
+    line-height: 32px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 2px;
+    padding: 0 26px;
+    border-radius: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.container-contact div[class^="col-"] {
+    position: relative;
+    min-height: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+.contact-description {
+    font-size: 16px;
+    line-height: 36px;
+}
+
+       
+
+    </style>
+</head>
+<nav>
+    <img src="images/index/logo.png" alt="Your Logo" class="logo">
+
+    <a href="index.php">Home</a>
+    <a href="about.html">About</a>
+    <a href="Blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="events.html">Events</a>
+    <a href="services.html">Services</a>
+    <a href="farm.html">Farm</a>
+    <a href="weather.html">Weather</a>
+    <a href="map.html">Map</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="flogin.php">Farmer</a>
+    <a href="ologin.php">Officer</a>
+    <a href="alogin.php">Admin</a>
+</nav>
+<br></br>
+<body>
+<div class="container container-contact bootstrap snippets bootdeys bootdey">
+<div class="row decor-default">
+<div class="col-md-12">
+<div class="contact">
+<div class="controls">
+<span class="icon icon-folder" data-toggle="tooltip" data-placement="top" title data-original-title="Archive"></span>
+<span class="icon icon-delete" data-toggle="tooltip" data-placement="top" title data-original-title="Delete"></span>
+<span class="icon icon-close" data-toggle="tooltip" data-placement="top" title data-original-title="Close"></span>
+<span class="write" data-toggle="tooltip" data-placement="top" title data-original-title="New"></span>
+<img src="images/index/weather.jpg" alt="cover" class="cover">
+<div class="row">
+<div class="col-md-4 col-md-5 col-xs-12">
+<div class="row">
+    <div class="col-xs-3">
+        Date 
+    </div>
+    <div class="col-xs-9">
+        : January 27, 2024
+    </div>
+<div class="col-xs-3">
+C.Temp 
+</div>
+<div class="col-xs-9">
+    : 22°C (72°F)
+</div>
+<div class="col-xs-3">
+W.Cond 
+</div>
+<div class="col-xs-9">
+    : Clear skies
+</div>
+<div class="col-xs-3">
+    Humidity
+</div>
+<div class="col-xs-9">
+    : 45%
+</div>
+<div class="col-xs-3">
+    Wind
+</div>
+<div class="col-xs-9">
+   : 10 km/h from the west
+</div>
+</div>
+</div>
+<div class="col-lg-8 col-md-7 col-xs-12">
+<p class="contact-description">In the tranquil town of Meadowbrook Village, the weather today is characterized by a pleasant atmosphere and mild temperatures. As the sun graces the skies with its warm glow, the current temperature stands at a comfortable 25°C (77°F). A gentle breeze from the east whispers through the air, creating a soothing ambiance for residents and visitors alike. The clear skies offer an unobstructed view of the picturesque landscape, making it an ideal day for outdoor activities. Humidity levels are moderate at 50%, and no precipitation is expected throughout the day. As evening approaches, the temperature is forecasted to dip slightly, providing a refreshing coolness. Whether strolling through the town park or enjoying a peaceful evening on the porch, Meadowbrook Village residents can anticipate a delightful day immersed in the tranquility of their surroundings.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+    $('span[data-toggle="tooltip"]').tooltip();
+})
+</script>
+<br></br>
+
+</html>

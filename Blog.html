@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>Eco Harvest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+    	@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+body {
+font-family: 'Signika', sans-serif;
+margin: 0;
+padding: 0;
+background-color: white;
+position: relative; /* Ensure the body has a relative position */
+}
+nav {
+        background-color: rgb(2, 39, 10);
+        overflow: hidden;
+        font-family: 'Signika', sans-serif;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px; /* Add padding for spacing */
+    }
+
+    .logo {
+        max-height: 50px; /* Set the maximum height for your logo */
+        margin-right: 20px; /* Adjust the right margin for spacing between logo and links */
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: flex-end; /* Align the navigation links to the right */
+        gap: 10px; /* Adjust the gap for spacing between links */
+    }
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-family: 'Signika', sans-serif; /* Use Signika font for the links */
+}
+nav a:last-child {
+        margin-right: 0; /* Remove the right margin for the last link */
+    }
+
+    nav a:hover,
+nav a:focus,
+nav a:active {
+    text-decoration: none;
+    background-color: #30ce2a;
+    color: rgb(2, 39, 10);
+}
+a, a:focus , a:hover{ 
+  text-decoration: none;
+  color: inherit;
+}
+ a:hover, .btn{
+	outline:none!important;
+}
+
+/*ROUNDED CORNER*/
+*{
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+/*CATEGORIES BADGE*/
+.badge {
+	font-weight: 600;
+	font-size: 13px;
+	color: white;
+	background-color: #289dcc;
+}
+/*FEATURED*/
+.mg-2, .mg-4{
+	margin-left:-20px;
+}
+.linkfeat{
+	background: rgba(76,76,76,0);
+	background: -moz-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(48,48,48,0) 49%, rgba(19,19,19,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(76,76,76,0)), color-stop(49%, rgba(48,48,48,0)), color-stop(100%, rgba(19,19,19,1)));
+	background: -webkit-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(48,48,48,0) 49%, rgba(19,19,19,1) 100%);
+	background: -o-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(48,48,48,0) 49%, rgba(19,19,19,1) 100%);
+	background: -ms-linear-gradient(top, rgba(76,76,76,0) 0%, rgba(48,48,48,0) 49%, rgba(19,19,19,1) 100%);
+	background: linear-gradient(to bottom, rgba(76,76,76,0) 0%, rgba(48,48,48,0) 49%, rgba(19,19,19,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313', GradientType=0 );
+}
+
+    </style>
+</head>
+<nav>
+    <img src="images/index/logo.png" alt="Your Logo" class="logo">
+
+    <a href="index.php">Home</a>
+    <a href="about.html">About</a>
+    <a href="Blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="events.html">Events</a>
+    <a href="services.html">Services</a>
+    <a href="farm.html">Farm</a>
+    <a href="weather.html">Weather</a>
+    <a href="map.html">Map</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="flogin.php">Farmer</a>
+    <a href="ologin.php">Officer</a>
+    <a href="alogin.php">Admin</a>
+    
+</nav>
+<br></br>
+<body>
+<div class="container">
+<div class="row">
+<div class="col-sm-12 col-md-6 col-lg-6  py-0 pl-3 pr-1 featcard">
+<div id="featured" class="carousel slide carousel-fade" data-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<div class="card bg-dark text-white">
+<img class="card-img img-fluid" src="images/index/blog1.jpg" alt>
+<div class="card-img-overlay d-flex linkfeat">
+<a href="#" class="align-self-end">
+<span class="badge">Livestock and Animal Husbandry</span>
+<h4 class="card-title">Beekeepers Embrace Innovative Breeding Techniques for Resilient Bee Colonies</h4>
+<p class="textfeat" style="display: none;">In response to environmental challenges, beekeepers are adopting 
+    advanced breeding methods to cultivate resilient bee colonies. These techniques aim to enhance resistance to diseases and 
+    improve overall hive health, contributing to the conservation of these crucial pollinators.
+</p>
+</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card bg-dark text-white">
+<img class="card-img img-fluid" src="images/index/blog3.jpg" alt>
+<div class="card-img-overlay d-flex linkfeat">
+<a href="#" class="align-self-end">
+<span class="badge">Livestock and Animal Husbandry</span>
+<h4 class="card-title">Technological Advancements Transforming Dairy Farms</h4>
+<p class="textfeat" style="display: none;">The dairy industry is undergoing a transformation
+    with the integration of technology in milk production. Smart sensors, automated milking
+     systems, and data analytics are enhancing efficiency on dairy farms, leading to increased 
+     milk yields and improved overall herd management.</p>
+</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card bg-dark text-white">
+<img class="card-img img-fluid" src="images/index/blog2.jpg" alt>
+<div class="card-img-overlay d-flex linkfeat">
+<a href="#" class="align-self-end">
+<span class="badge">Livestock and Animal Husbandry</span>
+<h4 class="card-title">Egg Farms Adopt Sustainable Practices for Increased Production</h4>
+<p class="textfeat" style="display: none;">In a move towards sustainability, egg farms
+     are implementing eco-friendly practices to boost production. From cage-free systems to 
+     solar-powered facilities, these innovations not only enhance egg output but also align 
+     with consumer demand for ethically produced and environmentally conscious eggs.
+
+
+
+
+
+</p>
+</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card bg-dark text-white">
+<img class="card-img img-fluid" src="images/index/blog4.jpg" alt>
+<div class="card-img-overlay d-flex linkfeat">
+<a href="#" class="align-self-end">
+<span class="badge">Livestock and Animal Husbandry</span>
+<h4 class="card-title">Surge in Popularity: Goat Milk Gains Traction in Health-Conscious Markets</h4>
+<p class="textfeat" style="display: none;">Goat milk, known for its nutritional benefits and digestibility,
+     is experiencing a surge in popularity among health-conscious consumers. Goat farmers are expanding their 
+     herds to meet the growing demand, highlighting the 
+    versatility and health advantages of goat milk over traditional dairy products.</p>
+</a>
+</div>
+</div>
+</div>
+<div class="carousel-item">
+<div class="card bg-dark text-white">
+<img class="card-img img-fluid" src="images/index/blog6.jpg" alt>
+<div class="card-img-overlay d-flex linkfeat">
+<a href="#" class="align-self-end">
+<span class="badge">Livestock and Animal Husbandry</span>
+<h4 class="card-title">Modern Chick Farming Embraces Welfare-Focused Approaches</h4>
+<p class="textfeat" style="display: none;">Chick farming is evolving with a focus on animal welfare and ethical practices. 
+    Farms are adopting spacious and comfortable living conditions, implementing humane handling procedures, and prioritizing 
+    the health and well-being of chicks. These advancements 
+    aim to enhance the overall quality of poultry products and meet consumer expectations for responsibly sourced food.</p>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-6 py-0 px-1 d-none d-lg-block">
+<div class="row">
+<div class="col-6 pb-2 mg-1	">
+<div class="card bg-dark text-white">
+<img class="card-img img-fluid" src="images/index/blog7.jpg" alt>
+<div class="card-img-overlay d-flex">
+<a href="#" class="align-self-end">
+<span class="badge">Food Safety and Quality</span>
+<h6 class="card-title">Disease Strikes Corn Yards, Farmers Implement Urgent Measures</h6>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 pb-2 mg-2	">
+<div class="card bg-dark text-white">
+<img class="card-img img-fluid" src="images/index/blog8.jpg" alt>
+<div class="card-img-overlay d-flex">
+<a href="#" class="align-self-end">
+<span class="badge">Government Policies</span>
+<h6 class="card-title">Government Unveils Comprehensive Policies to Empower Fishermen</h6>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 pb-2 mg-3	">
+<div class="card bg-dark text-white">
+<img class="card-img img-fluid" src="images/index/blog9.jpg" alt>
+<div class="card-img-overlay d-flex">
+<a href="#" class="align-self-end">
+<span class="badge">Market and Trade</span>
+<h6 class="card-title">Consumers Face Pinch as Market Prices for Fruits Surge</h6>
+</a>
+</div>
+</div>
+</div>
+<div class="col-6 pb-2 mg-4	">
+<div class="card bg-dark text-white">
+<img class="card-img img-fluid" src="images/index/blog10.jpg" alt>
+<div class="card-img-overlay d-flex">
+<a href="#" class="align-self-end">
+<span class="badge">Crop Updates</span>
+<h6 class="card-title">Orange Orchards Thrive Amid Favorable Weather</h6>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+	//FEATURED HOVER
+$(document).ready(function(){
+      $(".linkfeat").hover(
+        function () {
+            $(".textfeat").show(500);
+        },
+        function () {
+            $(".textfeat").hide(500);
+        }
+    );
+});
+</script>
+<br></br>
+</body>
+</html>

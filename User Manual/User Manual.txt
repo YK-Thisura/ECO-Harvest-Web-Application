@@ -1,0 +1,16 @@
+http://localhost/ECO%20Farming/index.php
+
+
+Farmer
+Register and log
+
+
+Officer
+wasantha@gmail.com
+adeesha@gmail.com
+55555
+
+
+Admin
+theekshana@gmail.com
+44444

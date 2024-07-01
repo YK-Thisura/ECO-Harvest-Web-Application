@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>Eco Harvest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+    		@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+body {
+font-family: 'Signika', sans-serif;
+margin: 0;
+padding: 0;
+background-color: white;
+position: relative; /* Ensure the body has a relative position */
+}
+.section-title h2 {
+        font-weight: bold;
+    }
+nav {
+        background-color: rgb(2, 39, 10);
+        overflow: hidden;
+        font-family: 'Signika', sans-serif;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px; /* Add padding for spacing */
+    }
+
+    .logo {
+        max-height: 50px; /* Set the maximum height for your logo */
+        margin-right: 20px; /* Adjust the right margin for spacing between logo and links */
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: flex-end; /* Align the navigation links to the right */
+        gap: 10px; /* Adjust the gap for spacing between links */
+    }
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-family: 'Signika', sans-serif; /* Use Signika font for the links */
+}
+nav a:last-child {
+        margin-right: 0; /* Remove the right margin for the last link */
+    }
+
+    nav a:hover,
+nav a:focus,
+nav a:active {
+    text-decoration: none;
+    background-color: #30ce2a;
+    color: rgb(2, 39, 10);
+}
+.home-blog {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+@media (min-width: 992px) {
+    .home-blog {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+}
+.home-blog .section-title {
+    padding-bottom: 15px;
+}
+.home-blog .media {
+    margin-top: 50px;
+}
+@media (min-width: 768px) {
+    .home-blog .media {
+        margin-top: 30px;
+    }
+}
+.bg-sand {
+    background-color: #f5f5f6;
+}
+.media.blog-media {
+    margin-top: 30px;
+    position: relative;
+    display: block;
+}
+@media (min-width: 992px) {
+    .media.blog-media {
+        display: table;
+    }
+}
+.media.blog-media .circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    position: absolute;
+    padding: 0;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+    box-shadow: none;
+    transform: translateX(0);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+.media.blog-media .circle .day {
+    color: #fff;
+    transition: color 0.25s ease;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1;
+    margin-top: 12px;
+}
+.media.blog-media .circle .month {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.media.blog-media > a {
+    position: relative;
+    display: block;
+}
+@media (min-width: 992px) {
+    .media.blog-media > a {
+        display: table-cell;
+        vertical-align: top;
+        min-width: 200px;
+    }
+}
+@media (min-width: 1200px) {
+    .media.blog-media > a {
+        min-width: 230px;
+    }
+}
+
+.media.blog-media > a img {
+    width: 100%;
+}
+.media.blog-media:hover > a:before {
+    opacity: 1;
+    transform: scale(1);
+}
+.media.blog-media:hover .circle {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.media.blog-media:hover .circle .day,
+.media.blog-media:hover .circle .month {
+    color: #222;
+}
+.media.blog-media:hover .media-body h5 {
+    color: #0cc652;
+}
+.media.blog-media:hover .media-body a.post-link {
+    color: #0cc652;
+    text-decoration: underline;
+}
+.media.blog-media .media-body {
+    border: 1px solid #efeff3;
+    padding: 30px 30px 10px;
+    font-size: 14px;
+    background: #fff;
+    border-top: none;
+}
+@media (min-width: 992px) {
+    .media.blog-media .media-body {
+        padding: 15px 20px 10px;
+        border-top: 1px solid #efeff3;
+        border-left: none;
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+@media (min-width: 1200px) {
+    .media.blog-media .media-body {
+        padding: 30px 20px 10px;
+    }
+}
+.media.blog-media .media-body h5 {
+    transition: color 0.3s ease;
+    margin-bottom: 15px;
+}
+@media (min-width: 992px) {
+    .media.blog-media .media-body h5 {
+        font-size: 15px;
+    }
+}
+@media (min-width: 1200px) {
+    .media.blog-media .media-body h5 {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+}
+.media.blog-media .media-body a.post-link {
+    display: block;
+    color: #222;
+    font-size: 11px;
+    padding: 23px 0;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+@media (min-width: 992px) {
+    .media.blog-media .media-body a.post-link {
+        padding: 7px 0;
+    }
+}
+@media (min-width: 1200px) {
+    .media.blog-media .media-body a.post-link {
+        padding: 23px 0;
+    }
+}
+.media.blog-media .media-body ul {
+    position: relative;
+    padding: 10px 0 0;
+}
+.media.blog-media .media-body ul li {
+    display: inline-block;
+    width: 49%;
+    position: relative;
+}
+.media.blog-media .media-body ul li:before {
+    position: absolute;
+    content: "";
+    top: 5px;
+    left: 0;
+    width: 1px;
+    height: 14px;
+    background: #9f9fa3;
+}
+.media.blog-media .media-body ul li:first-child:before {
+    visibility: hidden;
+}
+.media.blog-media .media-body ul:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #eeeef2;
+}
+
+    </style>
+</head>
+<nav>
+    <img src="images/index/logo.png" alt="Your Logo" class="logo">
+
+    <a href="index.php">Home</a>
+    <a href="about.html">About</a>
+    <a href="Blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="events.html">Events</a>
+    <a href="services.html">Services</a>
+    <a href="farm.html">Farm</a>
+    <a href="weather.html">Weather</a>
+    <a href="map.html">Map</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="flogin.php">Farmer</a>
+    <a href="ologin.php">Officer</a>
+    <a href="alogin.php">Admin</a>
+    
+</nav>
+<body>
+<section class="home-blog bg-sand">
+<div class="container">
+
+<div class="row justify-content-md-center">
+<div class="col-xl-5 col-lg-6 col-md-8">
+<div class="section-title text-center title-ex1">
+<h2>Infinite Horizons, Exploring the Boundless World </h2>
+<p>"Eco Harvest Event: Explore Sustainable Solutions! Join us for eco-friendly innovations, discussions, 
+    and networking. Embrace a green future. Reserve your spot now!"</p>
+</div>
+</div>
+</div>
+
+<div class="row ">
+<div class="col-md-6">
+<div class="media blog-media">
+<a href="blog-post-left-sidebar.html"><img class="d-flex" src="images/index/eve5.jpg" alt="Generic placeholder image"></a>
+<div class="media-body">
+<a href><h5 class="mt-0">Organic Farming Service</h5></a>
+At the community event, the introduction of the organic farming service sparked enthusiasm, revolutionizing the 
+way attendees viewed sustainable agriculture and fostering a commitment to healthier living.
+<a href="" class="post-link">Read More</a>
+<ul>
+<li>by: Admin</li>
+<li class="text-right"><a href="blog-post-left-sidebar.html">157 comments</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="media blog-media">
+<a href="blog-post-left-sidebar.html"><img class="d-flex" src="images/index/eve6.png" alt="Generic placeholder image"></a>
+<div class="media-body">
+<a href><h5 class="mt-0">Farm Clubs</h5></a>
+At the Farm Club event, enthusiasts gathered to celebrate a shared passion for sustainable agriculture, 
+exchanging knowledge, seeds, and experiences to strengthen the community's commitment to organic farming.
+<a href="blog-post-left-sidebar.html" class="post-link">Read More</a>
+<ul>
+<li>by: Admin</li>
+<li class="text-right"><a href="blog-post-left-sidebar.html">234 comments</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="media blog-media">
+<a href="blog-post-left-sidebar.html"><img class="d-flex" src="images/index/eve3.png" alt="Generic placeholder image"></a>
+<div class="media-body">
+<a href><h5 class="mt-0">Latino Farmer Conference</h5></a>
+At the Latino Farmer Conference, attendees engaged in vibrant discussions, exchanging valuable insights and fostering a supportive network to
+empower and elevate the contributions of Latino farmers in the agricultural community.
+<a href="" class="post-link">Read More</a>
+<ul>
+<li>by: Admin</li>
+<li class="text-right"><a href="">110 comments</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="media blog-media">
+<a href=""><img class="d-flex" src="images/index/eve1.png" alt="Generic placeholder image"></a>
+<div class="media-body">
+<a href><h5 class="mt-0">Organic Week</h5></a>
+During Organic Week, communities united to celebrate sustainable practices, promote local organic farming, and raise awareness about the 
+benefits of choosing organic products for a healthier and environmentally conscious lifestyle.
+<a href="" class="post-link">Read More</a>
+<ul>
+<li>by: Admin</li>
+<li class="text-right"><a href="">186 comments</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+    <div class="media blog-media">
+    <a href=""><img class="d-flex" src="images/index/eve8.jpg" alt="Generic placeholder image"></a>
+    <div class="media-body">
+    <a href><h5 class="mt-0">Farmer Market</h5></a>
+    At the bustling Farmer's Market, local producers and community members converged to celebrate the abundance of fresh,
+     seasonal produce, creating a vibrant hub that fosters connections between farmers and consumers.
+    <a href="" class="post-link">Read More</a>
+    <ul>
+    <li>by: Admin</li>
+    <li class="text-right"><a href="">131 comments</a></li>
+    </ul>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-6">
+        <div class="media blog-media">
+        <a href=""><img class="d-flex" src="images/index/eve7.png" alt="Generic placeholder image"></a>
+        <div class="media-body">
+        <a href><h5 class="mt-0">International Organic Day</h5></a>
+        International Organic Day brought together communities worldwide to celebrate and promote the principles of organic farming, emphasizing the
+         importance of sustainable agriculture for global health and environmental well-being.
+        <a href="" class="post-link">Read More</a>
+        <ul>
+        <li>by: Admin</li>
+        <li class="text-right"><a href="">246 comments</a></li>
+        </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    
+</div>
+</div>
+</section>
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+</html>

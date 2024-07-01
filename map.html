@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+
+<title>Eco Harvest</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+     	@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+body {
+font-family: 'Signika', sans-serif;
+margin: 0;
+padding: 0;
+background-color: #f4f4f4;
+font-weight: bold;
+min-height: 100vh; /* Set minimum height to 100% of viewport height */
+display: flex;
+flex-direction: column;
+}
+
+.container {
+flex: 1; /* Allow the container to grow and fill the available space */
+}
+nav {
+background-color: rgb(2, 39, 10);
+overflow: hidden;
+font-family: 'Signika', sans-serif;
+display: flex;
+align-items: center;
+padding: 10px 80px; /* Add padding for spacing */
+}
+
+.logo {
+max-height: 50px; /* Set the maximum height for your logo */
+margin-right: 20px; /* Adjust the right margin for spacing between logo and links */
+}
+
+.nav-links {
+display: flex;
+justify-content: flex-end; /* Align the navigation links to the right */
+gap: 10px; /* Adjust the gap for spacing between links */
+}
+
+nav a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+font-weight: bold;
+margin-right: 10px;
+padding: 14px 16px;
+text-decoration: none;
+transition: background-color 0.3s;
+font-family: 'Signika', sans-serif; /* Use Signika font for the links */
+}
+nav a:last-child {
+margin-right: 0; /* Remove the right margin for the last link */
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+text-decoration: none;
+background-color: #30ce2a;
+color: rgb(2, 39, 10);
+}
+
+.form-control {
+  box-shadow: none !important;
+  outline: none !important;
+  border: 2px solid #cecece;
+  height: 38px;
+}
+.form-control:hover ,.form-control:focus{
+  border-color: #97a0af;
+}
+
+
+.error {
+  margin: 8px 0px;
+  display: none;
+  color: red;
+}
+#ajaxsuccess {
+  font-size: 16px;
+  width: 100%;
+  display: none;
+  clear: both;
+  margin: 8px 0px;
+}
+.con_sub_text {
+  margin: 20px 0px;
+  font-size: 15px;
+}
+
+.contact-detail-box {
+  margin-bottom: 50px;
+}
+
+.contact-detail-box address {
+  font-size: 14px;
+}
+.contact-map {
+  background-color: #ededed;
+}
+
+.title-box .border,.btn-primary,.back-to-top,
+.logo i,.question-q-box,.social-circle li a:hover {
+  background-color: rgb(2, 39, 10)!important;
+}
+.title-box .title-alt,.text-colored,.footer a:hover,
+.navbar-custom .navbar-nav li a:hover,
+.navbar-custom .navbar-nav li a:focus,
+.navbar-custom .navbar-nav li a:active,
+.navbar-custom .navbar-nav li.active a {
+  color: rgb(2, 39, 10);
+}
+
+.btn-primary {
+  border: 1px solid rgb(2, 39, 10) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.focus,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open > .dropdown-toggle.btn-primary,
+.btn-primary.active.focus, .btn-primary.active:focus, 
+.btn-primary.active:hover, .btn-primary:active.focus, 
+.btn-primary:active:focus, .btn-primary:active:hover, 
+.open>.dropdown-toggle.btn-primary.focus, 
+.open>.dropdown-toggle.btn-primary:focus, 
+.open>.dropdown-toggle.btn-primary:hover {
+  background-color: #d85600 !important;
+  border: 1px solid #d85600 !important;
+}
+
+.btn-shadow.btn-primary {
+  box-shadow: 1px 5px 9px rgba(241, 96, 1, 0.32);
+}
+
+
+
+/*======= Responsive ======*/
+@media (min-width: 768px) {
+    .nav-custom-left {
+		margin-left: 5%;
+	}
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .contact-page .col-sm-6 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-custom {
+        -moz-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+    box-shadow: 0 2px 2px rgba(0,0,0,.1);
+  }
+  .screen-space {
+    margin: 0px auto 50px auto;
+  }
+  .feature-detail {
+    padding: 0px 0px 50px 30px !important;
+  }
+  .footer h5 {
+    margin-top: 30px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px){
+  .blog-wrapper .blog-item {
+    width: 50%;
+  }
+  .navbar-custom .navbar-nav li a {
+    font-size: 12px;
+  }
+  .blog-detail-box {
+  padding-right: 0px;
+}
+}
+@media only screen and (min-width: 767px) and (max-width: 991px){
+  
+}
+@media (max-width: 767px) {
+  .blog-wrapper .blog-item {
+    width: 100%;
+  }
+  .logo {
+    margin-top: 7px;
+  }
+  .blog-detail-box {
+  padding-right: 0px;
+}
+}
+
+    </style>
+</head>
+<nav>
+  <img src="images/index/logo.png" alt="Your Logo" class="logo">
+
+  <a href="index.php">Home</a>
+  <a href="about.html">About</a>
+  <a href="Blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="events.html">Events</a>
+  <a href="services.html">Services</a>
+  <a href="farm.html">Farm</a>
+  <a href="weather.html">Weather</a>
+  <a href="map.html">Map</a>
+  <a href="schedule.html">Schedule</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="flogin.php">Farmer</a>
+  <a href="ologin.php">Officer</a>
+  <a href="alogin.php">Admin</a>
+</nav>
+<br></br>
+<body>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container bootstrap snippets bootdeys">
+<div class="row text-center">
+<div class="col-sm-4">
+<div class="contact-detail-box">
+<i class="fa fa-th fa-3x text-colored"></i>
+<h4>Get In Touch</h4>
+<abbr title="Phone"></abbr> 070 5830889<br>
+<a href="" class="text-muted"><span class="__cf_email__" data-cfemail="">ecoharvest@gmail.com</span></a>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="contact-detail-box">
+<i class="fa fa-map-marker fa-3x text-colored"></i>
+<h4>Our Location</h4>
+<address>
+  18/2, A Meadowbrook Village <br>
+ Hensaldeep<br>
+</address>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="contact-detail-box">
+<i class="fa fa-book fa-3x text-colored"></i>
+<h4>24x7 Support</h4>
+<p>Contact Our Supporting Team</p>
+
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-sm-6">
+<div class="contact-map">
+<iframe src="https://www.google.com/maps/embed/v1/place?q=New+York+University&amp;key=AIzaSyBSFRN6WWGYwmFi498qXXsD2UwkbmD74v4" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="width: 100%; height: 360px;"></iframe>
+</div>
+</div>
+
+<div class="col-sm-6">
+<form role="form" name="ajax-form" id="ajax-form" action="https://formsubmit.io/send/coderthemes@gmail.com" method="post" class="form-main">
+<div class="form-group">
+<label for="name2">Name</label>
+<input class="form-control" id="name2" name="name" onblur="if(this.value == '') this.value='Name'" onfocus="if(this.value == 'Name') this.value=''" type="text" value="Name">
+<div class="error" id="err-name" style="display: none;">Please enter name</div>
+</div> 
+<div class="form-group">
+<label for="email2">Email</label>
+<input class="form-control" id="email2" name="email" type="text" onfocus="if(this.value == 'E-mail') this.value='';" onblur="if(this.value == '') this.value='E-mail';" value="E-mail">
+<div class="error" id="err-emailvld" style="display: none;">E-mail is not a valid format</div>
+</div> 
+<div class="form-group">
+<label for="message2">Message</label>
+<textarea class="form-control" id="message2" name="message" rows="5" onblur="if(this.value == '') this.value='Message'" onfocus="if(this.value == 'Message') this.value=''">Message</textarea>
+<div class="error" id="err-message" style="display: none;">Please enter message</div>
+</div> 
+<div class="row">
+<div class="col-xs-12">
+<div id="ajaxsuccess" class="text-success">E-mail was successfully sent.</div>
+<div class="error" id="err-form" style="display: none;">There was a problem validating the form please check!</div>
+<div class="error" id="err-timedout">The connection to the server timed out!</div>
+<div class="error" id="err-state"></div>
+<button type="submit" class="btn btn-primary btn-shadow btn-rounded w-md" id="send">Submit</button>
+</div> 
+</div> 
+</form> 
+</div> 
+</div> 
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+	
+</script>
+</body>
+<br></br>
+</html>

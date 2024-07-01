@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Eco Harvest</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Signika:wght@300&display=swap');
+
+        body {
+        font-family: 'Signika', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f5f3;
+        position: relative; /* Ensure the body has a relative position */
+    }
+    nav {
+        background-color: rgb(2, 39, 10);
+        overflow: hidden;
+        font-family: 'Signika', sans-serif;
+        display: flex;
+        align-items: center;
+        padding: 10px 20px; /* Add padding for spacing */
+    }
+
+    .logo {
+        max-height: 50px; /* Set the maximum height for your logo */
+        margin-right: 20px; /* Adjust the right margin for spacing between logo and links */
+    }
+
+    .nav-links {
+        display: flex;
+        justify-content: flex-end; /* Align the navigation links to the right */
+        gap: 10px; /* Adjust the gap for spacing between links */
+    }
+
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    font-family: 'Signika', sans-serif; /* Use Signika font for the links */
+}
+nav a:last-child {
+        margin-right: 0; /* Remove the right margin for the last link */
+    }
+
+    nav a:hover,
+nav a:focus,
+nav a:active {
+    text-decoration: none;
+    background-color: #30ce2a;
+    color: rgb(2, 39, 10);
+}
+
+
+    header {
+        background-color: rgb(96, 226, 129);
+        color: rgb(2, 39, 10);
+        text-align: center;
+        padding: 10px;
+        font-family: 'Signika', sans-serif;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: space-between; /* Ensure items are spaced evenly */
+    }
+
+    header a {
+        text-decoration: none;
+        color: rgb(2, 39, 10);
+    }
+
+    header h1 {
+    margin-top: 15px; /* Add some margin to the top of the h1 element */
+    margin-bottom: 0; /* Remove the default bottom margin */
+}
+
+
+    .view-cart {
+        text-decoration: none;
+        color: rgb(2, 39, 10);
+        font-family: 'Signika', sans-serif;
+        font-weight: bold;
+        align-self: flex-end; /* Align the "View Cart" link to the end of the flex container */
+    }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 15px;
+            background-color: rgb(225, 236, 228);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .product img {
+            max-width: 100%;
+            max-height: 150px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-details {
+            margin-bottom: 10px;
+        }
+
+        .add-to-cart {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            background-color:rgb(2, 39, 10);
+            color: white;
+            text-align: center;
+             font-weight: bold;
+            padding: 20px; /* Adjust the padding as needed */
+            width: 100%;
+            box-sizing: border-box; /* Include padding and border in the total width */
+        }
+    
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            nav a {
+                float: none;
+                width: 100%;
+                text-align: left;
+            }
+
+            section {
+                max-width: 100%; /* Full width on small screens */
+            }
+        }
+    </style>
+</head>
+<nav>
+    <img src="images/index/logo.png" alt="Your Logo" class="logo">
+
+    <a href="index.php">Home</a>
+    <a href="about.html">About</a>
+    <a href="Blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a href="events.html">Events</a>
+    <a href="services.html">Services</a>
+    <a href="farm.html">Farm</a>
+    <a href="weather.html">Weather</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="flogin.php">Farmer</a>
+    <a href="ologin.php">Officer</a>
+    <a href="alogin.php">Admin</a>
+    <a href="#" class="view-cart" onclick="viewCart()" style="text-decoration: none; color: white; font-family: 'Signika', sans-serif; font-weight: bold; align-self: flex-end;">
+        <i class="fas fa-shopping-cart" style="font-size: 20px;"></i>  Cart
+    </a>
+</nav>
+<br></br>
+<body>
+   
+    <div class="product-container">
+        <div class="product">
+            <img src="images/Seeds/Dal.jpg" alt="Dal">
+            <div class="product-details">
+                <h2>Dal</h2>
+                <p>Pre-Packed Dal</p>
+                <p>Price: Rs 390.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Dal', 390.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Kaupi.jpg" alt="Kaupi">
+            <div class="product-details">
+                <h2>Kaupi</h2>
+                <p>Pre-Packed Kaupi</p>
+                <p>Price: Rs 560.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Kaupi', 560.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Rice.jpg" alt="Sudu Kakulu">
+            <div class="product-details">
+                <h2>Sudu Kakulu </h2>
+                <p>Pre-Packed Sudu Kakulu</p>
+                <p>Price: Rs 1240.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Sudu Kakulu', 1240.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Mung beans.jpg" alt="Mung Beans">
+            <div class="product-details">
+                <h2>Mung Beans</h2>
+                <p>Pre-Packed Mung Beans</p>
+                <p>Price: Rs 1970.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Mung Beans', 1970.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Soya Meat.jpg" alt="Soya Meat">
+            <div class="product-details">
+                <h2>Soya Meat</h2>
+                <p>Pre-Packed Soya Meat</p>
+                <p>Price: Rs 470.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Soya Meat', 470.99)">Add to Cart</button>
+        </div>
+
+         <div class="product">
+            <img src="images/Seeds/Cashew.jpg" alt="Cashew">
+            <div class="product-details">
+                <h2>Cashew</h2>
+                <p>Pre-Packed Cashew</p>
+                <p>Price: Rs 450.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Cashew', 450.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Rathu Kakulu.jpg" alt="Rathu Kakulu">
+            <div class="product-details">
+                <h2>Rathu Kakulu</h2>
+                <p>Pre-Packed Rathu Kakulu</p>
+                <p>Price: Rs 970.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Rathu Kakulu', 970.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Thala.jpg" alt="Thala">
+            <div class="product-details">
+                <h2>Thala</h2>
+                <p>Pre-Packed Thala</p>
+                <p>Price: Rs 650.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Thala', 650.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Kadala Parippu.jpg" alt="Kadala Parippu">
+            <div class="product-details">
+                <h2>Kadala Parippu</h2>
+                <p>Pre-Packed Kadala Parippu</p>
+                <p>Price: Rs 1300.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Kadala Parippu', 1300.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Coffie Beans.jpg" alt="Coffie Beans">
+            <div class="product-details">
+                <h2>Coffie Beans</h2>
+                <p>Pre-Packed Coffie Beans</p>
+                <p>Price: Rs 1090.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Coffie Beans', 1090.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Gammirise.jpg" alt="Gammirise">
+            <div class="product-details">
+                <h2>Gammirise </h2>
+                <p>Pre-Packed Gammirise</p>
+                <p>Price: Rs 870.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Gammirise', 870.99)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Seeds/Kadala.jpg" alt="Kadala">
+            <div class="product-details">
+                <h2>Kadala</h2>
+                <p>Pre-Packed Kadala</p>
+                <p>Price: Rs 470.99</p>
+            </div>
+            <button class="add-to-cart" onclick="addToCart('Kadala', 470.99)">Add to Cart</button>
+        </div>
+
+        <!-- Add more products as needed -->
+    </div>
+    <script>
+        function addToCart(productName, price) {
+            alert('Added ' + productName + ' to Cart and Total Price : Rs ' + price);
+            // You can add more logic here to handle the cart functionality (e.g., update a cart object, send data to the server, etc.)
+        }
+
+        function viewCart() {
+            alert('View Cart clicked. Implement your view cart logic here.');
+            // You can add more logic here to navigate to the cart page or display the cart details.
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
